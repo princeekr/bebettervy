@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion } from 'motion/react';
-import MoodSelector from './MoodSelector';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
@@ -68,7 +67,6 @@ export default function Sidebar() {
       </nav>
       
       <div className="p-4 border-t border-white/10 space-y-4">
-        <MoodSelector />
         <button
           onClick={logout}
           className="w-full flex items-center justify-start text-muted-foreground hover:text-white hover:bg-white/5 px-4 py-2 rounded-md transition-colors"

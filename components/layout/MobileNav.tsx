@@ -14,7 +14,6 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
-import MoodSelector from './MoodSelector';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
@@ -70,7 +69,6 @@ export default function MobileNav() {
               </NavLink>
             ))}
             <div className="pt-6 mt-6 border-t border-white/10 space-y-4">
-              <MoodSelector />
               <button
                 onClick={() => {
                   logout();
