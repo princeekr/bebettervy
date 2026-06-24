@@ -152,7 +152,7 @@ export default function MemoryWall() {
             <Card className="glass-card overflow-hidden cursor-pointer group">
               <div className="relative">
                 <img src={memory.image} alt={memory.caption} className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <p className="text-white text-sm line-clamp-2">{memory.caption}</p>
                 </div>
                 <Button

@@ -1,13 +1,14 @@
-import { Outlet } from 'react-router-dom';
+import React from 'react';
+import { useLocation, useOutlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import MobileNav from './MobileNav';
 import { motion, AnimatePresence } from 'motion/react';
-import { useLocation } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import BackgroundBlobs from './BackgroundBlobs';
 
 export default function AppLayout() {
   const location = useLocation();
+  const element = useOutlet();
 
   return (
     <div className="flex h-[100dvh] bg-black overflow-hidden selection:bg-primary/30 relative">
@@ -29,7 +30,7 @@ export default function AppLayout() {
                 transition={{ duration: 0.3, ease: 'easeOut' }}
                 className="h-full p-4 md:p-8 max-w-7xl mx-auto"
               >
-                <Outlet />
+                {element && React.cloneElement(element as React.ReactElement, { key: location.pathname })}
               </motion.div>
             </AnimatePresence>
           </main>

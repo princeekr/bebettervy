@@ -247,7 +247,7 @@ export default function Goals() {
         >
           <Card className="glass-card p-6 border-white/10 hover:border-primary/50 transition-colors">
             {/* Desktop Action buttons - visible on hover (hidden on small touch devices generally by hover media query, but let's keep them here for desktop users) */}
-            <div className="hidden md:flex absolute top-4 right-4 space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="hidden md:flex absolute top-4 right-4 space-x-2 opacity-0 md:group-hover:opacity-100 transition-opacity">
               {goal.status !== 'archived' && (
                 <Button variant="ghost" size="icon" onClick={() => togglePin(goal)} className={goal.isPinned ? 'text-primary' : 'text-muted-foreground hover:text-white'}>
                   {goal.isPinned ? <Pin className="w-4 h-4" /> : <PinOff className="w-4 h-4" />}

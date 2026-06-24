@@ -30,7 +30,7 @@ export default function Sidebar() {
   return (
     <div className="w-64 h-[100dvh] hidden md:flex flex-col border-r border-white/10 glass">
       <div className="p-6">
-        <h1 className="text-2xl font-bold text-gradient tracking-tight mb-2">BeBetterVY</h1>
+        <h1 className="text-2xl font-bold text-white tracking-tight mb-2">BeBetterVY</h1>
         <p className="text-xs text-muted-foreground font-mono">Built by me. For me.</p>
       </div>
 
