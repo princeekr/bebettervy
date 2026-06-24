@@ -1,0 +1,83 @@
+{
+  "collections": [
+    {
+      "name": "journalEntries",
+      "fields": {
+        "userId": { "type": "string" },
+        "content": { "type": "string" },
+        "mood": { "type": "string" },
+        "date": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.resource.data.userId == request.auth.uid",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == request.auth.uid",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    {
+      "name": "memories",
+      "fields": {
+        "userId": { "type": "string" },
+        "image": { "type": "string" },
+        "caption": { "type": "string" },
+        "date": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.resource.data.userId == request.auth.uid",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == request.auth.uid",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    {
+      "name": "motivations",
+      "fields": {
+        "userId": { "type": "string" },
+        "category": { "type": "string" },
+        "content": { "type": "string" },
+        "author": { "type": "string" },
+        "isPinned": { "type": "boolean" },
+        "date": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.resource.data.userId == request.auth.uid",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == request.auth.uid",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    {
+      "name": "letters",
+      "fields": {
+        "userId": { "type": "string" },
+        "content": { "type": "string" },
+        "dateWritten": { "type": "timestamp" },
+        "dateToOpen": { "type": "timestamp" },
+        "isOpened": { "type": "boolean" }
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.resource.data.userId == request.auth.uid",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == request.auth.uid",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    {
+      "name": "milestones",
+      "fields": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "timestamp" },
+        "type": { "type": "string" }
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.resource.data.userId == request.auth.uid",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == request.auth.uid",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    }
+  ]
+}
