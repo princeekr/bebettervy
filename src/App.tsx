@@ -8,7 +8,6 @@ import Goals from './pages/Goals';
 import MyJourney from './pages/MyJourney';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { AuthProvider } from '../contexts/AuthContext';
-import { Toaster } from 'sonner';
 
 export default function App() {
   return (
@@ -27,7 +26,6 @@ export default function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-        <Toaster theme="dark" position="top-center" />
       </AuthProvider>
     </ThemeProvider>
   );

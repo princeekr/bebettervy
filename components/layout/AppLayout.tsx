@@ -23,10 +23,10 @@ export default function AppLayout() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={location.pathname}
-                initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -10, filter: 'blur(4px)' }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
                 className="h-full p-4 md:p-8 max-w-7xl mx-auto"
               >
                 <Outlet />
@@ -35,7 +35,7 @@ export default function AppLayout() {
           </main>
         </div>
       </div>
-      <Toaster theme="dark" className="glass" />
+      <Toaster theme="dark" className="glass" position="top-center" />
     </div>
   );
 }
